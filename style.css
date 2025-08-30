@@ -24,11 +24,9 @@ header h1 {
     font-size: 3em;
     color: #ffd700; /* Dourado, como estrelas */
 }
-image {
-    width: 20%;
-            max-width: 400px;
-            margin: 10px;
-}
+img{
+        width: 100%;
+    }
 
 nav ul {
     list-style: none;
