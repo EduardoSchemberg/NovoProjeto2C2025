@@ -11,7 +11,39 @@ document.getElementById("gerar-estrelas").addEventListener("click", function() {
         campoEstrelas.appendChild(estrela);
     }
 });
+ window.onload = function() {
+    alert('Bem-vindo ao nosso site!');
+  }
+let count = 0;
+  const button = document.getElementById('clickButton');
+  const display = document.getElementById('clickCount');
 
+  button.addEventListener('click', () => {
+    count++;
+    display.textContent = count;
+  });
+
+   const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    if (body.classList.contains('dark-theme')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+
+   const form = document.getElementById('myForm');
+  form.addEventListener('submit', function(event) {
+    const nameField = document.getElementById('name');
+    if (nameField.value.trim() === '') {
+      alert('Por favor, insira o seu nome.');
+      event.preventDefault();
+    }
+  });
+  
 // Efeito de estrela piscando
 var style = document.createElement('style');
 style.innerHTML = `
